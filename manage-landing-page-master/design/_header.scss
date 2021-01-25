@@ -19,6 +19,7 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100vw;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -40,6 +41,7 @@ header {
     #close-menu {
         display: none;
         z-index: 10;
+        
     }
 
     #mobile-menu-wrapper {
@@ -58,7 +60,7 @@ header {
         display: none;
         position: absolute;
         margin: 4em auto;
-        width: 86%;
+        width: 90vw;
         height: auto;
 
         ul {

@@ -4,6 +4,7 @@ const openMenuBtn = document.getElementById('open-menu');
 const closeMenuBtn = document.getElementById('close-menu');
 const menuWrapper = document.getElementById('mobile-menu-wrapper');
 const menu = document.getElementsByClassName('header-nav')[0];
+const mainContainer = document.getElementById('container');
 
 openMenuBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
@@ -13,7 +14,8 @@ function openMenu() {
     menuWrapper.style.display = 'block';
     closeMenuBtn.style.display = 'block';
     menu.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+    mainContainer.style.position = 'fixed';
+    mainContainer.style.overflowY = 'hidden';
 }
 
 function closeMenu() {
@@ -21,8 +23,9 @@ function closeMenu() {
     menuWrapper.style.display = 'none';
     closeMenuBtn.style.display = 'none';
     menu.style.display = 'none';
-    document.body.style.overflowX = 'hidden';
-    document.body.style.overflowY = 'scroll';
+    mainContainer.style.position = 'relative';
+    mainContainer.style.overflowX = 'hidden';
+    mainContainer.style.overflowY = 'scroll';
 }
 
 // Email validation/error display
