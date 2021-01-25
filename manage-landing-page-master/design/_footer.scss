@@ -1,0 +1,169 @@
+// Variables
+
+// Font family
+$font-stack: 'Be Vietnam', sans-serif;
+
+// Colors
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+
+$dark-grayish-blue: hsl(227, 12%, 61%);
+$very-dark-blue: hsl(233, 12%, 13%);
+$very-pale-red: hsl(13, 100%, 96%);
+$very-light-grey: hsl(0, 0%, 98%);
+
+$focus-red: hsl(12, 79%, 71%);
+
+/* -------------------------------------- FOOTER ----------------------------------- */
+footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: $very-dark-blue;
+    gap: 3em;
+    padding: 2em 0;
+
+    form {
+        text-align: center;
+
+        .input-div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            padding: 0 2em;
+            
+            label {
+                padding-right: .5em;
+            }
+    
+            input {
+                border-radius: 35px;
+                padding: .8em 1.5em;
+                border: none;
+                width: 100%;
+                font-family: $font-stack;
+                color: $dark-grayish-blue;
+            }
+
+            input:focus {
+                border-bottom: solid 2px $focus-red;
+                outline: none;
+            }
+
+            button {
+                text-transform: uppercase;
+                padding: .8em 2em;
+                font-family: $font-stack;
+                color: white;
+                border: none;
+                border-radius: 35px;
+                background: $bright-red;
+                font-weight: 700;
+                position: relative;
+            }
+
+            button:hover, button:focus {
+                background: $focus-red;
+            }
+            
+        }
+        #error-div {
+            height: 30px;
+            width: 80%;
+            margin: 0 auto;
+            padding: .5em 0 0 0em;
+            color: $bright-red;
+            text-align: left;
+        }
+        
+    }
+
+    .nav-bottom-page {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+
+        nav {
+            -ms-flex-item-align: baseline;
+                align-self: baseline;
+        }
+
+        ul {
+
+            li {
+                list-style: none;
+                padding-bottom: .5em;
+
+                a {
+                    color: white;
+                    font-weight: 400;
+                }
+
+                a:hover, a:focus {
+                    color: $bright-red;
+                }
+            }
+        }
+    }
+
+    .all-logos {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 3em;
+
+        .social-media {
+            width: 80%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                    flex-grow: 1;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+
+            a {
+                svg {
+                    -webkit-transform: scale(1.5);
+                            transform: scale(1.5);
+                }
+            }
+            
+            a:hover, a:focus {
+                svg {
+
+                    path {
+                        fill: $bright-red;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    small {
+        text-align: center;
+        color: white;
+        font-weight: 400;
+    }
+}
