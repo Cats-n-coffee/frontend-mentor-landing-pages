@@ -1,0 +1,38 @@
+#section-1 {
+    padding: 0 1em 4em 1em;
+    display: flex;
+    flex-direction: column;
+    
+    img {
+        width: 130%;
+        height: auto;
+        padding-left: 2em;
+        padding-top: 2em;
+    }
+
+    .text-intro {
+        align-self: center;
+        padding-top: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            line-height: 1.3em;
+            color: $very-dark-blue;
+        }
+
+        p {
+            color: $grayish-violet;
+            text-align: center;
+            padding: 1em 0 1.5em 0;
+        }
+
+        button {
+            text-align: center;
+            font-size: 1rem;
+        }
+    }
+}

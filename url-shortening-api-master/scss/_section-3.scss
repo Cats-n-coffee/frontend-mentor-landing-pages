@@ -1,0 +1,81 @@
+#section-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8em 1em 3em 1em;
+    background: $light-gray;
+    position: relative;
+    z-index: 1;
+
+    .presentation-intro {
+        h2 {
+            color: $very-dark-blue;
+            text-align: center;
+            padding-bottom: 1em;
+        } 
+
+        p {
+            color: $grayish-violet;
+            text-align: center;
+            font-size: .8em;
+        }
+    }
+
+    .presentation-cards {
+        position: relative;
+        background: transparent;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 3em;
+
+            .empty-card {
+
+            }
+
+            .icon-card {
+                background: $dark-violet;
+                padding: 1em;
+                margin: 0 auto -35px auto;
+                border-radius: 50%;
+                z-index: 2;
+
+                svg {
+                    display: block;
+                }
+            }
+
+            .text-card {
+                background: white;
+                padding: 4em 1em 2em 1em;
+                border-radius: 10px;
+
+                h3 {
+                    color: $very-dark-blue;
+                    text-align: center;
+                    padding-bottom: .8em;
+                }
+
+                p {
+                    color: $gray;
+                    text-align: center;
+                    font-size: .8rem;
+                }
+
+            }
+        }
+    }
+
+    .presentation-cards:before {
+        content: '';
+        position: absolute;
+        top: 7em;
+        left: 49%;
+        height: calc(100% - 7em);
+        width: 6px;
+        background: $cyan;
+        z-index: -1;
+    }
+}

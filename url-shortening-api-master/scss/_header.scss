@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 1em 0 1em;
+    position: relative;
+
+    #hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        height: 26px;
+        width: 30px;
+        // gap: 4px;
+        
+        span {
+            width: 30px;
+            height: 4px;
+            background: $grayish-violet;
+
+            &:not(:first-child) {
+                margin-top: 7px;
+            }
+        }
+    }
+
+    .header-menu {
+        position: absolute;
+        width: calc(100% - 2em);
+        height: auto;
+        top: 16vh;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background: $dark-violet;
+        border-radius: 10px;
+        padding: 2em 1.5em;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(97, 96, 96);
+            width: 100%;
+            // align-items: center;
+            
+            li {
+                text-align: center;
+
+                a{
+                    color: white;
+                    font-weight: 700;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 2em;
+                }
+
+                &:last-child {
+                    margin-bottom: 2em;
+                }
+            }
+        }
+
+        .header-user-action {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            button {
+                margin-top: 2em;
+
+                &:first-child {
+                    border: none;
+                    background: transparent;
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+
+                &:last-child {
+                    width: 100%;
+                    font-size: 1rem;
+                }
+            }   
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+}
