@@ -84,6 +84,7 @@ main {
     outline: 1px solid $cyan;
     outline-offset: -.5em;
     padding: .7em 2.5em;
+    cursor: pointer;
 
     &:hover, &:focus {
         background: $button-hover;
@@ -91,8 +92,13 @@ main {
     }
 }
 
+// Partials
 @import 'header';
 @import 'section-1';
 @import 'section-2';
 @import 'section-3';
 @import 'footer';
+
+@import 'media-550';
+@import 'media-750';
+@import 'media-1100';

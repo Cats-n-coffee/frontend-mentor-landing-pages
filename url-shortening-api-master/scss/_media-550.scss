@@ -1,0 +1,24 @@
+@media screen and (min-width: 550px) {
+    #section-2 {
+        margin: 0 auto -2.3rem auto;
+
+        form {
+            flex-direction: row;
+
+            label {
+                width: 60%;
+                padding: 0 1em 0 0;
+
+                input {
+                    width: 100%;
+                    font-size: 1rem;
+                }
+            }
+
+            button {
+                width: 40%;
+                padding: .7em 1.5em;
+            }
+        }
+    }
+}

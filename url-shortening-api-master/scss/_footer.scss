@@ -76,6 +76,7 @@ footer {
                 &:hover, &:focus {
                     path {
                         fill: $cyan;
+                        cursor: pointer;
                     }
                 }
             }
