@@ -34,16 +34,30 @@ footer {
     }
 
     #footer-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+                align-items: center;
         background: $very-dark-violet;
         padding: 3em 0;
 
         .all-footer-menus {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+                    align-items: center;
 
             .footer-items {
                 h3 {
@@ -55,9 +69,16 @@ footer {
                 }
 
                 ul {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                            flex-direction: column;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                            align-items: center;
 
                     li {
                         padding-top: .5em;

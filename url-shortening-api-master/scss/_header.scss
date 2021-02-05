@@ -1,16 +1,28 @@
 header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
     padding: 2em 1em 0 1em;
     position: relative;
 
     #hamburger-menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        height: 26px;
-        width: 30px;
-        // gap: 4px;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+                align-items: center;
+        padding: 2em 1em 0 1em;
+        position: relative;
         
         span {
             width: 30px;
@@ -29,20 +41,34 @@ header {
         height: auto;
         top: 16vh;
         display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+                align-items: center;
         background: $dark-violet;
         border-radius: 10px;
         padding: 2em 1.5em;
 
         ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                    justify-content: space-between;
             border-bottom: 1px solid rgb(97, 96, 96);
             width: 100%;
-            // align-items: center;
             
             li {
                 text-align: center;
@@ -63,8 +89,13 @@ header {
         }
 
         .header-user-action {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                    flex-direction: column;
             width: 100%;
 
             button {
@@ -86,6 +117,8 @@ header {
         }
 
         &.show {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
         }
     }

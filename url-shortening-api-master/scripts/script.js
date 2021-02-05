@@ -70,6 +70,7 @@ function storeResults(data) {
 // Creates dynamic elements to show the user their search and previous searches
 function createResultsList() {
     resultsDiv.style.display = "flex";
+    clearResultsDiv();
 
     if (localStorage.getItem('storedLinks') === null) {
         return;
@@ -130,4 +131,11 @@ function removeErrors() {
     labelInput.classList.toggle('error');
     userInput.classList.toggle('error');
     return;
+}
+
+// Clears the results div before adding any children
+function clearResultsDiv() {
+    while (resultsDiv.firstChild) {
+        resultsDiv.removeChild(resultsDiv.firstChild);
+    }
 }

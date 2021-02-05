@@ -1,5 +1,7 @@
 @media screen and (min-width: 1100px) {
     header {
+        -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
         justify-content: unset;
         padding: 2em 5em 0 5em;
 
@@ -9,18 +11,32 @@
 
         .header-menu {
             position: static;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                    flex-direction: row;
             padding: 0;
-            justify-content: space-between;
-            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+                    align-items: center;
             width: calc(100% - 121px);
             background: unset;
             padding: 0 0 0 3em;
 
             ul {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
                 flex-direction: row;
-                justify-content: unset;
+                -webkit-box-pack: unset;
+                -ms-flex-pack: unset;
+                        justify-content: unset;
                 border: none;
 
                 li {
@@ -47,9 +63,17 @@
             }
 
             .header-user-action {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
                 flex-direction: row;
-                justify-content: flex-end;
-                align-items: center;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                        justify-content: flex-end;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                        -ms-grid-row-align: center;
+                        align-items: center;
     
                 button {
                     margin: 0;
@@ -96,6 +120,7 @@
             }
 
             button {
+                -ms-flex-item-align: start;
                 align-self: flex-start;
             }
         }
@@ -141,9 +166,13 @@
         }
 
         .presentation-cards {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             width: 100%;
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                    justify-content: space-between;
 
             .card {
                 min-height: 251px;
@@ -164,10 +193,6 @@
                         text-align: left;
                     }
                 }
-
-                // &:first-child {
-
-                // }
 
                 &:nth-child(2) {
                     margin-top: 2em;
@@ -207,7 +232,10 @@
 
         #footer-nav {
             padding: 3em 5em;
-            align-items: flex-start;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+                    -ms-grid-row-align: flex-start;
+                    align-items: flex-start;
             
             .all-footer-menus {
                 width: calc(100% - 285px);
