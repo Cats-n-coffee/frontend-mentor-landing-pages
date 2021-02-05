@@ -100,20 +100,20 @@ function copyLink() {
 
 function placeInLocalStorage(item) {
     console.log(item)
-    var items;
-    if (localStorage.getItem('sSearchResults') === null) {
-        items = [];
-        console.log('continue')
-    }
-    else {
-        console.log('else')
-        items = JSON.parse(localStorage.getItem('sSearchResults'));
-    }
+    // var items;
+    // if (localStorage.getItem('sSearchResults') === null) {
+    //     items = [];
+    //     console.log('continue')
+    // }
+    // else {
+    //     console.log('else')
+    //     items = JSON.parse(localStorage.getItem('sSearchResults'));
+    // }
 
-    console.log(typeof items)
-    items.push(item);
-    localStorage.setItem('sSearchResults', JSON.stringify(items));
-    console.log('item stored');
+    // console.log(typeof items)
+    // items.push(item);
+    // localStorage.setItem('sSearchResults', JSON.stringify(items));
+    // console.log('item stored');
 
     // if (localStorage) {
     //     var json = localStorage.getItem('sStorage') || '{"products": []}';
