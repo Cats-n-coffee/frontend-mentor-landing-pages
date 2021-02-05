@@ -115,14 +115,14 @@ function placeInLocalStorage(item) {
     // localStorage.setItem('sSearchResults', JSON.stringify(items));
     // console.log('item stored');
 
-    // if (localStorage) {
-    //     var json = localStorage.getItem('sStorage') || '{"products": []}';
-    //     var cart = JSON.parse(json);
-    //     cart.products.push(item);
-    //     localStorage.setItem("sStorage", JSON.stringify(cart))
-    // }
+    if (localStorage) {
+        var json = localStorage.getItem('sStorage') || '{"products": []}';
+        var cart = JSON.parse(json);
+        cart.products.push(item);
+        localStorage.setItem("sStorage", JSON.stringify(cart))
+    }
 
-    localStorage.setItem('cats', 'chichi');
+    localStorage.setItem('cats', 'fatty');
 }
 
 function removeErrors() {
