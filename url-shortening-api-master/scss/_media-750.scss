@@ -7,9 +7,27 @@
         flex-direction: row-reverse;
         padding: 2em 2em 4em 2em;
 
-        img {
-            width: 50%;
+        .illustration-intro {
+            width: 100%;
             height: auto;
+            left: 10%;
+        }
+
+        .text-intro {
+            width: 70%;
+
+            h1 {
+                text-align: left;
+                font-size: 2.3em;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            button {
+                align-self: flex-start;
+            }
         }
 
 
@@ -17,6 +35,7 @@
 
     #section-2 {
         margin: 0 auto -2.3rem auto;
+        width: calc(100% - 4em);
 
         form {
             flex-direction: row;

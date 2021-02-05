@@ -1,13 +1,13 @@
 #section-1 {
-    padding: 0 1em 4em 1em;
+    padding: 2em 1em 4em 1em;
     display: flex;
     flex-direction: column;
     
-    img {
-        width: 130%;
+    .illustration-intro {
+        width: 60vh;
         height: auto;
-        padding-left: 2em;
-        padding-top: 2em;
+        position: relative;
+        left: 20%;
     }
 
     .text-intro {

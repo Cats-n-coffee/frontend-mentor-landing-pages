@@ -2,12 +2,54 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8em 1em 3em 1em;
+    padding: 2em 1em 3em 1em;
     background: $light-gray;
     position: relative;
     z-index: 1;
 
+    #user-results {
+        display: none;
+        flex-direction: column;
+        background: white;
+        border-radius: 10px;
+        padding: 1em;
+        margin: 4em 0 0 0;
+        width: 100%;
+        overflow-x: hidden;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .long-link {
+                padding: 0 0 1em 0;
+                font-size: 1rem;
+                border-bottom: 1px solid $light-gray;
+                overflow: hidden;
+                word-wrap: break-word;
+                white-space: pre;
+                color: $very-dark-violet;
+                text-overflow: ellipsis;
+            }
+    
+            .short-link {
+                padding: 1em 0 1em 0;
+                font-size: 1rem;
+                color: $cyan;
+            }
+    
+            .copy-button {
+                width: 100%;
+                font-size: 1em;
+                border-radius: 5px;
+            }
+        }
+    }
+
     .presentation-intro {
+        padding: 6em 0 0 0;
+
         h2 {
             color: $very-dark-blue;
             text-align: center;

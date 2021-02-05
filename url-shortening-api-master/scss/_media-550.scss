@@ -1,6 +1,23 @@
 @media screen and (min-width: 550px) {
+    header {
+        .header-menu {
+            width: 50%;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+        }
+    }
+
+    #section-1 {
+        .illustration-intro {
+            left: 30%;
+            width: 70vh;
+        }
+    }
+
     #section-2 {
         margin: 0 auto -2.3rem auto;
+        padding: 2.5em;
 
         form {
             flex-direction: row;
@@ -19,6 +36,6 @@
                 width: 40%;
                 padding: .7em 1.5em;
             }
-        }
+        }    
     }
 }

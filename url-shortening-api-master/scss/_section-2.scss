@@ -1,10 +1,12 @@
 #section-2 {
-    width: 90%;
+    width: calc(100% - 2em);
     background: $dark-violet;
     margin: 0 auto -4rem auto;
     border-radius: 10px;
     padding: 1em;
     z-index: 2;
+    position: relative;
+    overflow: hidden;
 
     form {
         display: flex;
@@ -14,6 +16,7 @@
         label {
             width: 100%;
             padding: 0 0 1em 0;
+            position: relative;
 
             input {
                 width: 100%;
@@ -22,6 +25,27 @@
                 border-radius: 5px;
                 border: none;
                 color: $very-dark-blue;
+
+                &:focus {
+                    outline: 2px solid $cyan;
+                }
+
+                &.error {
+                    box-shadow: 0 0 0 2px $red;
+                    color: $red;
+                }
+            }
+
+            &.error:after {
+                content: "Please add a link";
+                position: absolute;
+                bottom: -60%;
+                left: 0;
+                width: auto;
+                height: auto;
+                color: $red;
+                font-style: italic;
+                font-size: .8em;
             }
         }
 
@@ -30,5 +54,19 @@
             border-radius: 5px;
             font-size: 1rem;
         }
+    }
+
+    &:before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='237' height='128' viewBox='0 0 237 128'%3E%3Cpath fill='%234B3F6B' fill-rule='evenodd' d='M0-.924C0 51.8 15.5 89.562 73 113.953c57.5 24.391 113.055 2.134 168.786 14.894 55.731 12.76 55.731 94.962 108.214 145.549s163.142 62.874 253.12 11.552C693.095 234.626 733.884 114.796 707 44.141 680.115-26.515 628.593-91 380-91 131.407-91 0-53.647 0-.924z'/%3E%3C/svg%3E");
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='237' height='128' viewBox='0 0 237 128'%3E%3Cpath fill='%234B3F6B' fill-rule='evenodd' d='M0-.924C0 51.8 15.5 89.562 73 113.953c57.5 24.391 113.055 2.134 168.786 14.894 55.731 12.76 55.731 94.962 108.214 145.549s163.142 62.874 253.12 11.552C693.095 234.626 733.884 114.796 707 44.141 680.115-26.515 628.593-91 380-91 131.407-91 0-53.647 0-.924z'/%3E%3C/svg%3E");
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        width: auto;
+        height: auto;
+        z-index: -1;
     }
 }

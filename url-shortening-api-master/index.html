@@ -35,7 +35,9 @@
     </header>
     <main>
       <section id="section-1">
-        <img src="images/illustration-working.svg" width="733" height="482" alt="person working at a desk">
+        <svg class="illustration-intro" width="733" height="482" viewBox="0 0 733 482">
+          <use xlink:href="/images/illustration-working.svg#illustration"></use>
+        </svg>
         <div class="text-intro">
           <h1>More than just shorter links</h1>
           <p>Build your brand’s recognition and get detailed insights 
@@ -45,13 +47,14 @@
       </section>
       <section id="section-2">
         <form action="" id="shortening-form">
-          <label for="enter-url">
+          <label for="enter-url" id="label-input">
             <input type="text" id="enter-url" placeholder="Shorten a link here...">
           </label>
           <button class="green-button">Shorten It!</button>
         </form>
       </section>
       <section id="section-3">
+        <ul id="user-results"></ul>
         <div class="presentation-intro">
           <h2>Advanced Statistics</h2>
           <p>Track how your links are performing across the web with our 
