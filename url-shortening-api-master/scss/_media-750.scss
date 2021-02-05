@@ -57,6 +57,48 @@
         }
     }
 
+    #section-3 {
+        padding: 2em 2em 3em 2em;
+
+        #user-results {
+
+            li {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .long-link {
+                    // justify-self: flex-start;
+                    padding: 0 0 0 0;
+                    border: none;
+                }
+
+                .result-right-side {
+                    display: flex;
+                    white-space: nowrap;
+                    align-items: center;
+                    padding: 0;
+
+                    .short-link {
+                        width: auto;
+                        // display: inline-block;
+                        padding: 0 0 0 0;
+                        margin: 0 0 0 2em;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+    
+                    .copy-button {
+                        width: auto;
+                        // justify-self: flex-end;
+                        margin: 0 0 0 2em;
+                    }
+                }    
+            }
+        }
+    }
+
     footer {
         #footer-nav {
             flex-direction: row;

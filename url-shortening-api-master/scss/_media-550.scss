@@ -30,6 +30,10 @@
                     width: 100%;
                     font-size: 1rem;
                 }
+
+                &.error:after {
+                    bottom: -2.2em;
+                }
             }
 
             button {

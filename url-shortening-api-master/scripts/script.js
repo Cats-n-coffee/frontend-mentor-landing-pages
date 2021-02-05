@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', createResultsList);
+
 // Toggle mobile menu
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const headerMenu = document.getElementsByClassName('header-menu')[0];
@@ -33,24 +35,20 @@ function getUserInput(e) {
 
     var cleanInput = userInput.value;
 
-    console.log(cleanInput)
     shortenUrlWithApi(cleanInput)
 
     userInput.value = '';
 }
 
-// Connects to URL shortner Api
+// Connects to URL shortner Api and shortens user search
 function shortenUrlWithApi(userURL) {
     fetch(`https://api.shrtco.de/v2/shorten?url=${userURL}`)
     .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        createResultsList(data);
-    });
+    .then(data => storeResults(data));
 }
 
-// Dynamically creates list of results to display
-function createResultsList(data) {
+// Retrieves the original and shortened link from the JSON and stores it in local storage
+function storeResults(data) {
     var longLink = data.result.original_link;
     var shortLink = data.result.full_short_link2;
 
@@ -59,25 +57,53 @@ function createResultsList(data) {
         result: shortLink
     }
 
-    placeInLocalStorage(storageItem);
+    if (localStorage) {
+        var json = localStorage.getItem('storedLinks') || '{"links": []}';
+        var arr = JSON.parse(json);
+        arr.links.push(storageItem);
+        localStorage.setItem("storedLinks", JSON.stringify(arr))
+    }
 
+    createResultsList();
+}
+
+// Creates dynamic elements to show the user their search and previous searches
+function createResultsList() {
     resultsDiv.style.display = "flex";
 
-    var itemResult = `<li>
-                        <span class="long-link">${longLink}</span>
-                        <span class="short-link">${shortLink}</span>
-                        <button class="green-button copy-button" data-link="link-">Copy</button>
-                      </li>`;
+    if (localStorage.getItem('storedLinks') === null) {
+        return;
+    }
 
-    resultsDiv.innerHTML = itemResult;
+    else {
+        // Retrieves all links from local storage
+        var storedItems = localStorage.getItem('storedLinks');
+        var linksArray = JSON.parse(storedItems);
+        var allLinks = linksArray.links;
+    }
+    
+    // Loop through the array of links to display all of them 
+    for (let i = 0; i < allLinks.length; i++) {
+        var currentLink = allLinks[i];
+        var search = currentLink.search;
+        var result = currentLink.result;
+
+        var itemResult = `<li>
+                            <span class="long-link">${search}</span>
+                            <div class="result-right-side">
+                                <span class="short-link">${result}</span>
+                                <button class="green-button copy-button" data-link="link-">Copy</button>
+                            </div>
+                        </li>`;
+
+        resultsDiv.innerHTML += itemResult;
+    }
     
     const copyButtons = document.querySelectorAll('.copy-button');
     copyButtons.forEach(button => button.addEventListener('click', copyLink))
-
-    console.log(shortLink)
 }
 
-// Gives the 'copy link' button its active color
+// Gives the 'copy link' button its active color and copy to clipboard
 function copyLink() {
     console.log('copy link');
 
@@ -86,7 +112,8 @@ function copyLink() {
     this.style.outline = 'none';
     this.innerText = 'Copied!';
 
- 
+    // The link being in a span tag, we need to place its text in a textarea to be able
+    // copy to the clipboard
     const shortLinkCopied = this.previousElementSibling.innerText;
     var textArea = document.createElement('textarea');
     textArea.value = shortLinkCopied;
@@ -98,33 +125,7 @@ function copyLink() {
     console.log(shortLinkCopied);
 }
 
-function placeInLocalStorage(item) {
-    console.log(item)
-    // var items;
-    // if (localStorage.getItem('sSearchResults') === null) {
-    //     items = [];
-    //     console.log('continue')
-    // }
-    // else {
-    //     console.log('else')
-    //     items = JSON.parse(localStorage.getItem('sSearchResults'));
-    // }
-
-    // console.log(typeof items)
-    // items.push(item);
-    // localStorage.setItem('sSearchResults', JSON.stringify(items));
-    // console.log('item stored');
-
-    if (localStorage) {
-        var json = localStorage.getItem('sStorage') || '{"products": []}';
-        var cart = JSON.parse(json);
-        cart.products.push(item);
-        localStorage.setItem("sStorage", JSON.stringify(cart))
-    }
-
-    localStorage.setItem('cats', 'fatty');
-}
-
+// Toggle classes for error styles to show and hide
 function removeErrors() {
     labelInput.classList.toggle('error');
     userInput.classList.toggle('error');
