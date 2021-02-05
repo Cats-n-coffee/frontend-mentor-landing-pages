@@ -25,8 +25,9 @@ $button-hover: hsl(180, 47%, 61%);
     box-sizing: border-box;
 }
 
-html {
+html, body {
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 body {
@@ -34,7 +35,6 @@ body {
     width: 100%;
     font-family: $font-stack;
     position: relative;
-    overflow-x: hidden;
 
     &.stop-scroll {
         overflow: hidden;
