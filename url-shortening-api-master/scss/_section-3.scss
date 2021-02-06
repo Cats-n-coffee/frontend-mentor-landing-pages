@@ -22,6 +22,7 @@
                 flex-direction: column;
         margin: 4em 0 0 0;
         width: 100%;
+        max-width: 1440px;
         overflow-x: hidden;
 
         li {
@@ -91,6 +92,7 @@
     .presentation-cards {
         position: relative;
         background: transparent;
+        max-width: 1440px;
 
         .card {
             display: -webkit-box;

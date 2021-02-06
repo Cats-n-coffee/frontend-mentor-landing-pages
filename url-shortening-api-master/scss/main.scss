@@ -61,7 +61,7 @@ li {
     width: 100%;
     height: 100%;
     position: relative;
-    overflow-x: hidden;
+    align-items: center;
 
     &.stop-scroll {
         overflow-y: hidden;
@@ -112,4 +112,3 @@ main {
 @import 'media-750';
 @import 'media-1100';
 @import 'media-1300';
-@import 'media-1440';

@@ -10,6 +10,9 @@ header {
             align-items: center;
     padding: 2em 1em 0 1em;
     position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 
     #hamburger-menu {
         display: -webkit-box;
