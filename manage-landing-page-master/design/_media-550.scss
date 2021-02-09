@@ -1,0 +1,26 @@
+@media screen and (min-width: 550px) {
+    #container:before {
+        -webkit-transform: translate(46%, -30%) scale(0.6);
+                transform: translate(46%, -30%) scale(0.6);
+    }
+
+    #container:after {
+        -webkit-transform: translate(55%, 40%) scale(0.5);
+                transform: translate(55%, 40%) scale(0.5);
+    }
+
+    #section-1 {
+        img {
+            width: 60%;
+            height: auto;
+        }
+    }
+
+    footer {
+        form {
+            width: 60%;
+            margin: 0 auto;
+        }
+        
+    }
+}

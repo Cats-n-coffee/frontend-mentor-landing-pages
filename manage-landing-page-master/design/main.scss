@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
 
-// Partials
-@import "header";
-@import "section-1";
-@import "section-2";
-@import "section-3";
-@import "bottom-banner";
-@import "footer";
+// -------------- Variables
 
 // Font family
 $font-stack: 'Be Vietnam', sans-serif;
@@ -22,6 +16,7 @@ $very-light-grey: hsl(0, 0%, 98%);
 
 $focus-red: hsl(12, 79%, 71%);
 
+/* ------------------------------------ GENERAL RULES -------------------------------- */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -35,72 +30,25 @@ html {
 body {
     font-family: $font-stack;
     position: relative;
-    padding-bottom: 20px;
     overflow-x: hidden;
     height: 100vh;
     width: 100%;
 }
 
-.attribution {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background: $very-dark-blue;
-    color: white;
-    font-size: .9em;
-}
-
-/* ------------------------------------ GENERAL RULES -------------------------------- */
-
 a {
     text-decoration: none;
-}
-
-.error {
-    border: 1px solid $bright-red;
-    color: $bright-red;
-}
-
-.get-started-button {
-    font-family: $font-stack;
-    color: white;
-    padding: 1em 2em;
-    border: none;
-    border-radius: 35px;
-    background: $bright-red;
-    font-weight: 700;
-    white-space: nowrap;
-    position: relative;
-}
-
-.get-started-button:after {
-        content:"";
-        position:absolute;
-        bottom: 0;
-        left: 10%;
-        width: 80%;
-        bottom:1px;
-        z-index:-1;
-        -webkit-transform:scale(.9);
-                transform:scale(.9);
-        box-shadow: 0px 0px 15px 4px $bright-red;
-}
-
-.get-started-button:hover, .get-started-button:focus {
-    background: $focus-red;
 }
 
 /* -------------------------------- CONTAINER ---------------------------------- */
 #container {
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
+    // -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
     overflow-x: hidden;
     position: relative;
 
@@ -142,4 +90,50 @@ main {
             flex-direction: column;
 }
 
-@import "media-queries";
+/* ---------------------------------- SHARED STYLES --------------------------------- */ 
+.get-started-button {
+    font-family: $font-stack;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 35px;
+    background: $bright-red;
+    font-weight: 700;
+    white-space: nowrap;
+    position: relative;
+}
+
+.get-started-button:after {
+        content:"";
+        position:absolute;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
+        bottom:1px;
+        z-index:-1;
+        -webkit-transform:scale(.9);
+                transform:scale(.9);
+        box-shadow: 0px 0px 15px 4px $bright-red;
+}
+
+.get-started-button:hover, .get-started-button:focus {
+    background: $focus-red;
+}
+
+.error {
+    border: 1px solid $bright-red;
+    color: $bright-red;
+}
+
+// Partials
+@import "header";
+@import "section-1";
+@import "section-2";
+@import "section-3";
+@import "bottom-banner";
+@import "footer";
+
+@import "media-550";
+@import "media-900";
+@import "media-1200";
+@import "media-1440";

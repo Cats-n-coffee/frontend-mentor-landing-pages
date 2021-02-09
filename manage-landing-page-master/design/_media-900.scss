@@ -1,47 +1,3 @@
-// Variables
-
-// Font family
-$font-stack: 'Be Vietnam', sans-serif;
-
-// Colors
-$bright-red: hsl(12, 88%, 59%);
-$dark-blue: hsl(228, 39%, 23%);
-
-$dark-grayish-blue: hsl(227, 12%, 61%);
-$very-dark-blue: hsl(233, 12%, 13%);
-$very-pale-red: hsl(13, 100%, 96%);
-$very-light-grey: hsl(0, 0%, 98%);
-
-$focus-red: hsl(12, 79%, 71%);
-
-/* ------------------------------------ MEDIA QUERIES ------------------------------- */
-@media screen and (min-width: 550px) {
-    #container:before {
-        -webkit-transform: translate(46%, -30%) scale(0.6);
-                transform: translate(46%, -30%) scale(0.6);
-    }
-
-    #container:after {
-        -webkit-transform: translate(55%, 40%) scale(0.5);
-                transform: translate(55%, 40%) scale(0.5);
-    }
-
-    #section-1 {
-        img {
-            width: 60%;
-            height: auto;
-        }
-    }
-
-    footer {
-        form {
-            width: 60%;
-            margin: 0 auto;
-        }
-        
-    }
-}
-
 @media screen and (min-width: 900px) {
     #container {
         padding: 5rem 5rem 0 5rem;
@@ -118,7 +74,6 @@ $focus-red: hsl(12, 79%, 71%);
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row;
-        gap: 5rem;
         padding: 3rem 0;
 
         .section-1-introduction {
@@ -126,11 +81,11 @@ $focus-red: hsl(12, 79%, 71%);
                 -ms-flex-align: start;
                         -ms-grid-row-align: flex-start;
                     align-items: flex-start;
-            gap: 16px;
-            gap: 1rem;
+            margin: 0 5em 0 0;
 
             h1 {
                 text-align: left;
+                margin: 0 0 .3em 0;
             }
 
             p {
@@ -150,10 +105,10 @@ $focus-red: hsl(12, 79%, 71%);
             -ms-flex-direction: row;
                 flex-direction: row;
         padding: 2rem 0;
-        gap: 5em;
     
         .section-2-presentation {
             padding: 0;
+            margin: 0 5em 0 0;
 
             h2 {
                 text-align: left;
@@ -199,8 +154,7 @@ $focus-red: hsl(12, 79%, 71%);
         padding-bottom: 6em;
         
         .review-slider {
-            margin: 0 -80px;
-            margin: 0 -5rem;
+            margin: 0 -5em;
 
 
             .review {
@@ -236,6 +190,7 @@ $focus-red: hsl(12, 79%, 71%);
         h2 {
             width: 40%;
             text-align: left;
+            margin: 0;
         }
 
         &:before {
@@ -263,7 +218,6 @@ $focus-red: hsl(12, 79%, 71%);
             -ms-flex-align: center;
                     -ms-grid-row-align: center;
                 align-items: center;
-        gap: 3em;
         padding: 3em 5rem;
         position: relative;
 
@@ -293,6 +247,7 @@ $focus-red: hsl(12, 79%, 71%);
                     flex: 1 0 38%;
             -ms-flex-pack: distribute;
                 justify-content: space-around;
+            margin: 0 3em;
 
             nav {
                 -ms-flex-item-align: baseline;
@@ -301,6 +256,8 @@ $focus-red: hsl(12, 79%, 71%);
         }
 
         .all-logos {
+            -ms-flex-item-align: baseline;
+                align-self: baseline;
             -webkit-box-flex: 1;
                 -ms-flex: 1 0 18%;
                     flex: 1 0 18%;
@@ -308,17 +265,24 @@ $focus-red: hsl(12, 79%, 71%);
             -webkit-box-direction: normal;
                 -ms-flex-direction: column;
                     flex-direction: column;
-            -webkit-box-pack: start;
-                -ms-flex-pack: start;
-                    justify-content: flex-start;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
             -webkit-box-align: start;
                 -ms-flex-align: start;
                         -ms-grid-row-align: flex-start;
                     align-items: flex-start;
             text-align: left;
+            margin: 0;
+            height: 100%;
 
             .social-media {
+                margin: 0;
                 height: auto;
+                width: 100%;
+                -webkit-box-flex: unset;
+                    -ms-flex-positive: unset;
+                    flex-grow: unset;
                 -webkit-box-pack: justify;
                     -ms-flex-pack: justify;
                         justify-content: space-between;
@@ -337,73 +301,6 @@ $focus-red: hsl(12, 79%, 71%);
             bottom: 10%;
             right: 112px;
             right: 7rem;
-        }
-    }
-}
-
-/* ------------------------------------- 1200PX -------------------------------- */
-@media screen and (min-width: 1200px) {
-    #container {
-        padding: 4rem 7rem 0 7rem;
-
-        &:before {
-            content: '';
-            position: absolute;
-            background: url('/images/bg-tablet-pattern.svg') no-repeat;
-            -webkit-transform: translate(80%, -35%) scale(0.8);
-                    transform: translate(80%, -35%) scale(0.8);
-            width: 814px;
-            height: 814px;
-        }
-
-        &:after {
-            content: '';
-            position: absolute;
-            background: url('/images/bg-tablet-pattern.svg') no-repeat;
-            -webkit-transform: translate(-65%, 110%) scale(0.8);
-                    transform: translate(-65%, 110%) scale(0.8);
-            width: 814px;
-            height: 814px;
-        }
-    }
-
-    header {
-        padding-bottom: 3em;
-
-        .header-nav {
-            ul {
-                padding: 0 80px;
-                padding: 0 5rem;
-            }
-        }
-    }
-
-    #section-3 {
-        .review-slider {
-            margin: 0 -112px;
-            margin: 0 -7rem;
-        }
-    }
-
-    #bottom-banner {
-        margin: 0 -7rem;
-    }
-
-    footer {
-        margin: 0 -7rem;
-        margin-bottom: -7rem;
-
-        form {
-            .input-div {
-                input {
-                    width: 180%;
-                }
-            }
-        }
-
-        small {
-            bottom: 48px;
-            bottom: 3rem;
         }
     }
 }

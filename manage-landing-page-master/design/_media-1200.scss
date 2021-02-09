@@ -1,0 +1,64 @@
+@media screen and (min-width: 1200px) {
+    #container {
+        padding: 4rem 7rem 0 7rem;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: url('/images/bg-tablet-pattern.svg') no-repeat;
+            -webkit-transform: translate(80%, -35%) scale(0.8);
+                    transform: translate(80%, -35%) scale(0.8);
+            width: 814px;
+            height: 814px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            background: url('/images/bg-tablet-pattern.svg') no-repeat;
+            -webkit-transform: translate(-65%, 110%) scale(0.8);
+                    transform: translate(-65%, 110%) scale(0.8);
+            width: 814px;
+            height: 814px;
+        }
+    }
+
+    header {
+        padding-bottom: 3em;
+
+        .header-nav {
+            ul {
+                padding: 0 80px;
+                padding: 0 5rem;
+            }
+        }
+    }
+
+    #section-3 {
+        .review-slider {
+            margin: 0 -7em;
+        }
+    }
+
+    #bottom-banner {
+        margin: 0 -7rem;
+    }
+
+    footer {
+        margin: 0 -7rem;
+        margin-bottom: -7rem;
+
+        form {
+            .input-div {
+                input {
+                    width: 180%;
+                }
+            }
+        }
+
+        small {
+            bottom: 48px;
+            bottom: 3rem;
+        }
+    }
+}
