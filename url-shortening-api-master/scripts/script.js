@@ -18,6 +18,7 @@ const userInput = document.getElementById('enter-url'); // input tag
 const labelInput = document.getElementById('label-input') // label tag 
 const form = document.getElementById('shortening-form'); // form tag
 const resultsDiv = document.getElementById('user-results'); // div tag for results inserted dynamically
+const spinner = document.getElementById('spinner-container'); 
 
 form.addEventListener('submit', getUserInput);
 
@@ -38,6 +39,7 @@ function getUserInput(e) {
     shortenUrlWithApi(cleanInput)
 
     userInput.value = '';
+    spinner.style.display = 'flex';
 }
 
 // Connects to URL shortner Api and shortens user search
@@ -69,6 +71,7 @@ function storeResults(data) {
 
 // Creates dynamic elements to show the user their search and previous searches
 function createResultsList() {
+    spinner.style.display = 'none';
     resultsDiv.style.display = "flex";
     clearResultsDiv();
 

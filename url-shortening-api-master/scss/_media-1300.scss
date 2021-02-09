@@ -3,42 +3,43 @@
     header {
         padding: 2em 10em 0 10em;
     }
-
-    #section-1 {
-        padding: 2em 10em;
-        margin: 0 auto;
-
-        .illustration-intro {
-            left: 20%;
-            max-width: 733;
-            max-height: 482;
-        }
-    }
-
-    #section-2 {
-        width: calc(100% - 20em);
-        padding: 2em 3em;
-
-        form {
-
-            label {
-                width: 80%;
-            }
-
-            button {
-                width: 20%;
+    main {
+        #section-1 {
+            padding: 2em 10em;
+            margin: 0 auto;
+    
+            .illustration-intro {
+                left: 20%;
+                max-width: 733;
+                max-height: 482;
             }
         }
-    }
-
-    #section-3 {
-        padding: 3em 10em 5em 10em;
-
-        .presntation-card {
-            padding: 7em 0 0 0;
-
-            .card {
-                max-width: 340px;
+    
+        #section-2 {
+            width: calc(100% - 20em);
+            padding: 2em 3em;
+    
+            form {
+    
+                label {
+                    width: 80%;
+                }
+    
+                button {
+                    width: 20%;
+                }
+            }
+        }
+    
+        #section-3 {
+            padding: 3em 10em 5em 10em;
+    
+            .presentation-card {
+                padding: 7em 0 0 0;
+    
+                .card {
+                    max-width: 340px;
+                }
             }
         }
     }

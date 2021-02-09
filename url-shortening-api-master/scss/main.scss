@@ -17,6 +17,10 @@ $very-dark-violet: hsl(260, 8%, 14%);
 // Hover colors
 $button-hover: hsl(180, 47%, 61%);
 
+// Spinner only colors
+$medium-violet: hsl(258, 19%, 45%);
+$light-violet: hsl(259, 23%, 71%);
+
 // -------------------------------------- GENERAL STYLES ------------------------------------ //
 
 *, *:before, *:after {
@@ -112,3 +116,5 @@ main {
 @import 'media-750';
 @import 'media-1100';
 @import 'media-1300';
+
+@import 'spinner-animation';
