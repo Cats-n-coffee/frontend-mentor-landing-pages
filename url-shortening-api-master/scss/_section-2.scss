@@ -9,6 +9,8 @@
     z-index: 2;
     position: relative;
     overflow: hidden;
+    transform: translateY(200%);
+    animation: 1.5s ease-out 500ms forwards slideIn;
 
     form {
         display: -webkit-box;
@@ -77,5 +79,14 @@
         width: auto;
         height: auto;
         z-index: -1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0);
     }
 }

@@ -98,10 +98,13 @@ main {
     outline-offset: -.5em;
     padding: .7em 2.5em;
     cursor: pointer;
+    -webkit-transition: all 600ms ease-in-out;
+            transition: all 600ms ease-in-out;
 
     &:hover, &:focus {
         background: $button-hover;
         outline-color: $button-hover;
+        transform: scale(1.1);
     }
 }
 

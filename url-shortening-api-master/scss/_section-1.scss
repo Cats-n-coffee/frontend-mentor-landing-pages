@@ -16,6 +16,8 @@
         position: relative;
         left: 20%;
         z-index: -1;
+        opacity: 0;
+        animation: 1.5s ease-out 500ms forwards fadeIn;
     }
 
     .text-intro {
@@ -32,6 +34,9 @@
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+        opacity: 0;
+        -webkit-animation: 1.5s ease-out 500ms forwards fadeIn;
+                animation: 1.5s ease-out 500ms forwards fadeIn;
         
         h1 {
             text-align: center;
@@ -50,6 +55,50 @@
             text-align: center;
             font-size: 16px;
             font-size: 1rem;
+            -webkit-animation: 2s wiggleButton;
+            animation: 2s wiggleButton;
+            -webkit-animation-iteration-count: 4;
+                    animation-iteration-count: 4;
+            -webkit-animation-delay: 1.5s;
+                    animation-delay: 1.5s;
         }
     }
+}
+
+@-webkit-keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    100% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    100% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes wiggleButton {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    80% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    85% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+    90% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+    100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+@keyframes wiggleButton {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    80% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    85% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+    90% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+    100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 }
