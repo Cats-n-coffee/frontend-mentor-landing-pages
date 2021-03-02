@@ -83,11 +83,11 @@ function changeSlide() {
     let rightSideContainer = leftSideContainer + sliderDiv.clientWidth;
     var leftSideSlide = 0;
     var rightSideSlide = 0;
-
+ 
     slides.forEach(slide => {
         leftSideSlide = slide.offsetLeft - sliderDiv.offsetLeft;
         rightSideSlide = leftSideSlide + slide.clientWidth;
-
+     
         let isShowing = (leftSideSlide >= leftSideContainer && rightSideSlide <= rightSideContainer);
 
         if (isShowing) {
